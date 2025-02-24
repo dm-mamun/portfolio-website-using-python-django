@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background: #F9F9F9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1E2A38;
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #1E2A38;
+}
+
+/* Header Section */
+header {
+    background-color: #1E2A38;
+    color: #FFF;
+    padding: 15px 0; /* Reduced padding */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2em; /* Reduced font size */
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px; /* Reduced spacing between links */
+    font-size: 1.1em; /* Reduced font size */
+}
+
+/* Profile Section */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+#about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#about .intro-text {
+    padding-left: 30px;
+    max-width: 500px;
+}
+
+#about .intro-text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#about .intro-text p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Services Section */
+#services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.service-item {
+    display: inline-block;
+    width: 30%;
+    background: #FFF;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 0;
+    background: #FFF;
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    background: #F9F9F9;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project h3 {
+    font-size: 1.6em;
+    margin-top: 20px;
+}
+
+.project p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.project a {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #1E2A38;
+    color: #FFF;
+    padding: 60px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #FFD700;
+    color: #1E2A38;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1E2A38;
+    color: #FFD700;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1E2A38;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0; /* Reduced padding */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social-links a {
+    margin: 0 10px; /* Reduced spacing between social links */
+    color: #FFD700;
+    font-size: 1.2em; /* Reduced font size */
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #FFF;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .service-item,
+    .project {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .intro-text {
+        padding-left: 0;
+    }
+
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}

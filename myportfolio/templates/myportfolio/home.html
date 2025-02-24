@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <nav>
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="{% static 'files/cv.pdf' %}" class="download-link" download>Download CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <img src="{% static 'images/ma.jpg' %}" alt="Mamun Ahmed" class="profile-img">
+            <div class="intro-text">
+                <h2>Hi, I'm Mamun Ahmed</h2>
+                <p>I’m a Digital Marketer with a passion for Electrical Engineering...</p>
+                <a href="{% static 'files/cv.pdf' %}" class="download-link" download>Download My CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>My Services</h2>
+            <div class="service-item">
+                <img src="{% static 'images/seo_icon.png' %}" alt="SEO">
+                <h3>SEO Optimization</h3>
+                <p>Boost your website’s visibility with data-driven SEO strategies.</p>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            {% for project in projects %}
+            <div class="project">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                {% if project.image %}
+                <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                {% endif %}
+                <a href="{{ project.link }}" target="_blank">View Project</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container contact-form">
+            <h2>Contact Me</h2>
+            <form method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mamun Ahmed. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mamun-ahmed" target="_blank">LinkedIn</a>
+                <a href="https://facebook.com/dmpromamun" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

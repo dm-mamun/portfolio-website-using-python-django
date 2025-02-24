@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamun Ahmed - CV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mamun Ahmed's CV</h1>
+            <nav>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'cv' %}">My CV</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cv-content">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mamunahmed@wizardmediapro.com">mamunahmed@wizardmediapro.com</a></p>
+        <p>Phone: +8801758282957</p>
+
+        <h2>Summary</h2>
+        <p>I'm a dynamic individual who's passionate about Electrical and Electronic Engineering (EEE) and Digital Marketing. As an EEE student, I'm delving into circuits and innovation, while in Digital Marketing, I create strategies that drive results.</p>
+
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Bsc. in Electrical and Electronic Engineering</strong> (3.63 GPA) - Green University of Bangladesh</li>
+            <li><strong>HSC</strong> (4.75 GPA) - Jalalpur College</li>
+        </ul>
+
+        <h2>Experience</h2>
+        <h3>SEO Specialist - Wizard Media Pro</h3>
+        <p>Develop and implement SEO strategies to improve website performance and organic search rankings.</p>
+
+        <h3>Marketing Manager - Needy House Builders Pvt LTD</h3>
+        <p>Managed marketing strategies, including events and social media campaigns.</p>
+
+        <h3>Social Media Manager</h3>
+        <p>Managed social media platforms and optimized content for audience engagement.</p>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>Search Engine Optimization (SEO)</li>
+            <li>Social Media Management</li>
+            <li>Robotics and Automation</li>
+            <li>Android App Development</li>
+        </ul>
+
+        <h2>Download My CV</h2>
+        <a href="{% static 'docs/cv.pdf' %}" target="_blank" class="download-link">Download CV (PDF)</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mamun Ahmed. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
